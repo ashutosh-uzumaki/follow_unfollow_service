@@ -19,5 +19,4 @@ type Mutation {
     followUser(followerId: String!, followeeId: String!): Follow!
     unfollowUser(followerId: String!, followeeId: String!): Boolean!
     createUser(userId: String!, name: String!): User!
-    updateUser(userId: String!, name: String!): User!
 }
