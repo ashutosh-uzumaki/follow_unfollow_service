@@ -1,0 +1,23 @@
+type User {
+    userId: String!
+    name: String!
+}
+
+type Follow {
+    followerId: String!
+    followeeId: String!
+}
+
+type Query {
+    listFollowers(userId: String!): [Follow!]!
+    listFollowing(userId: String!): [Follow!]!
+    getUser(userId: String!): User
+    listUsers: [User!]!
+}
+
+type Mutation {
+    followUser(followerId: String!, followeeId: String!): Follow!
+    unfollowUser(followerId: String!, followeeId: String!): Boolean!
+    createUser(userId: String!, name: String!): User!
+    updateUser(userId: String!, name: String!): User!
+}
